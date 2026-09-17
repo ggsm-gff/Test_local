@@ -1,0 +1,93 @@
+Plantilla:
+formato definido que permite sustituir información.
+Jinja:
+	Lenguaje de plantillas simple basado en texto
+	{{...}} representa una sustitución de plantilla
+	dbt tiene varias funciones Jinja disponibles
+	Permite un uso mas dinámico en dbt
+	Permite ejecución de bucles
+
+Algunas funciones Jinja Disponibles en dbt
+- ref: acceder a modelos por nombre
+- config: acceder a configuraciones
+- docs: acceder a la documentación
+
+- Calculos y bucle
+
+Sin Jinja
+Select 
+	coalesce(start_date, '2025-01-01') as start_date,
+	coalesce(update_date, '2025-01-01') as update_date,
+	coalesce(end_date, '2025-01-01') as end_date
+From events
+
+Con Jinja
+Select
+{% for columna in ['start_date', 'update_date', 'end_date'] %}
+coalesce({{column}},'2025-01-01') as {{column}}
+{% endfor %}
+from events
+
+--===========================================================
+select
+{% for column_name in ['fare_amount', 'tip_amount', 'tolls_amount', 'total_amount'] %}
+  {{column_name}}{% if not loop.last %},{% endif %}
+{% endfor %}
+from taxi_rides_raw
+
+--Esto genera el query y añade la coma al final de cada fila
+
+Modelos Jerarquicos en dbt
+La jerarquía representa las dependencias dentro de un proyecto dbt
+DAG
+Permite que los modelos se construyan o actualicen teniendo en cuenta sus dependencias.
+Sin un dag, dbt construye los modelos por orden alfabetico
+
+En dbt la jerarquía se define usando plantillas jinja
+usando sobretodo la fucion ref 
+	{{ ref('modelo_1') }}
+luego se debe usar dbt run
+select
+first_name, last_name
+from {{ ref('taxi_rides_raw') }}
+
+--===========================================================
+
+Tests in dbt
+Test type: 
+Built in
+-unique
+-not_null
+-accepted_values: verifica que los valores estén dentro de una lista, la lista se especifica con values: [a, b, c, d]
+-relationships: verifica una conexión con una tabla/columna
+to: ref('table')
+field: id
+
+Las pruebas se especifican en un archivo yaml dentro del directorio del modelo:
+models/model_properties.yml o schema.yml
+
+las pruebas se definen en el apartado "test" del yaml
+…
+- name: payment_type
+tests:
+	- not null
+	- accepted_values:
+		values: [1, 2, 3, 4]
+
+esto define que la columna payment_type no puede ser nula y que sus valores pueden ser 1, 2, 3 o 4
+
+dbt test
+ dbt test --select model_name
+
+
+
+
+
+
+
+
+
+
+
+
+
