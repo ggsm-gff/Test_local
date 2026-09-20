@@ -79,8 +79,120 @@ esto define que la columna payment_type no puede ser nula y que sus valores pued
 dbt test
  dbt test --select model_name
 
+para encontrar el error, buscar dentro de target/compiled/model_name.sql
+este sql se puede ejecutar en el motor de base de datos y verificar los errores.
+
+**Singular test**
+custom data test, deben retornar filas cuando fallen.
+Son archivos .sql en el directorio test
+
+comprobar que order_total >= subtotal
+
+select *
+from order
+where order_total < subtotal --buscamos filas que incumplen la condición de la prueba
+
+--assert_order_total_gte_subtotal.sql
+
+select *
+from {{ ref('order')}}
+where order_total < subtotal
+
+dbt test --select <testname>
+
+flujo de creación de pruebas
+determinar la validación necesaria
+crear la consulta sql
+guardar la consulta en un archivo de prueba .sql
+dbt run
+dbt test
+
+**Reusable Test**
+usan plantillas jinja
+se guardan como archivo .sql dentro de tests/generic
+se debe agregar la prueba dentro de model_properties.yml para cada modelo que la usa.
 
 
+{% test check_gt_0(model, column_name) %}
+select *
+from {{ model }}
+where {{ column_name }} > 0
+{% endtest %}
+
+añadir al model_properties.yml
+
+# Ejemplo de model_properties.yml
+versión: 2
+
+models:
+	- name : taxi_rodes_raw
+	  columns:
+		- name: tpep_pickup_datetime
+		  tests:
+			- not_null
+		- name: total_fare
+		  tests:
+			- check_gt_0
+
+Parámetros extras, similar a accepted_values y relationships
+se añade el argumento en el encabezado jinja
+
+{% test check_columns_unequal(model, column_name, column_name2) %}
+select *
+from {{ model }}
+where {{ column_name }} = {{ column_name2 }}
+
+{% endtest %}
+
+model_properties.yml
+models:
+	- name order
+	  columns:
+	- name: order_time
+		tests:
+		  - check_columns_unequal:
+			column_name2: shipped_time
+
+dbt run .. dbt test --select order
+
+
+
+**DBT SOURCES**
+permiten nombrar y describir las fuentes de datos cargadas por el proceso EL
+ayudan a definir el linaje de los datos, describe el flujo de datos en warehouse
+
+utilizan las plantillas jinja
+select *
+from {{ source('raw','orders')}}
+
+se definen dentro de los archivos yml del directorio models
+puede ser models/model_properties.yml
+
+ejemplo:
+sources:
+	- name: raw
+	  tables:
+		- name: phone_orders
+		- name: web_orders
+
+select *
+from {{ source('raw','phone_orders') }}
+union
+select *
+from {{ source('raw','web_orders') }}
+	
+se puede aplicar test a las sources, en el model_properties.yml se definen estos test bajo la sección de sources.
+
+versión: 2
+sources:
+	- name: raw
+	  tables:
+		- name: phone_orders
+		  columns:
+			- name: id
+			  tests:
+				- not_null
+				- unique
 
 
 
