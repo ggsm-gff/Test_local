@@ -1,0 +1,62 @@
+mi_proyecto/
+│
+├── .venv/
+├── pyproject.toml
+├── uv.lock
+├── README.md
+│
+├── src/
+│   └── mi_proyecto/
+│       ├── __init__.py
+│       ├── main.py
+│       └── utils.py
+│
+├── scripts/
+│   ├── carga_datos.py
+│   └── generar_reporte.py
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── output/
+│
+├── notebooks/
+│   └── exploracion.ipynb
+│
+└── tests/
+    └── test_utils.py
+
+--==================================================--
+
+mi_pipeline/
+│
+├── pyproject.toml
+├── uv.lock
+├── .venv/
+│
+├── src/
+│   └── pipeline/
+│       ├── __init__.py
+│       │
+│       ├── extract/
+│       │   ├── salesforce.py
+│       │   └── sap.py
+│       │
+│       ├── transform/
+│       │   ├── customers.py
+│       │   └── products.py
+│       │
+│       ├── load/
+│       │   ├── sqlserver.py
+│       │   └── snowflake.py
+│       │
+│       ├── config.py
+│       └── main.py
+│
+├── scripts/
+│   ├── run_daily.py
+│   └── backfill.py
+│
+├── tests/
+│
+└── data/
