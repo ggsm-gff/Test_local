@@ -43,7 +43,7 @@ ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING
 ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING
 ```
 
-````sql
+```sql
 -- Create the correct extension to enable CROSSTAB
 CREATE EXTENSION IF NOT EXISTS tablefunc;
 
@@ -77,3 +77,13 @@ $$) AS ct (Country VARCHAR,
 Order by Country ASC;
 ```
 
+## Tipos de datos
+- Texto: 
+    - `CHAR`, `VARCHAR`, `TEXT`
+- NUMERICO
+    - `INT`, `DECIMAL`
+- FECHA
+    - `DATE`, `DATETIME`, `TIMESTAMP`, `INTERVAL`
+
+Tabla de Interés:  
+    `INFORMATION_SCHEMA.COLUMNS`
