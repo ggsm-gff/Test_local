@@ -1,0 +1,84 @@
+2026-10-16 15:12:10,091 | INFO | restaurants | Pipeline clientes iniciado
+2026-10-16 15:12:10,093 | INFO | restaurants | Pipeline clientes finalizado exitosamente
+2026-10-16 15:21:30,886 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 15:21:30,888 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 15:21:30,888 | ERROR | restaurants | Error durante la extracción
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\P-1004\src\p_1004\pipelines\restaurants\run.py", line 14, in <module>
+    load_restaurants(restaurants_data=restaurants_data)
+    ^^^^^^^^^^^^^^^^
+NameError: name 'load_restaurants' is not defined
+2026-10-16 15:22:17,329 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 15:22:17,329 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 15:22:17,331 | INFO | restaurants | Pipeline restaurants finalizado exitosamente
+2026-10-16 16:03:32,089 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:03:32,089 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:03:32,089 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:03:32,089 | ERROR | restaurants | Error leyendo el archivo de origen
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\dev\NoteTaking\vault\Practice\P-1004\src\p_1004\pipelines\restaurants\extract.py", line 14, in extract_restaurants_data
+    with open(f'{utils.DATA_DIR}/{filename}','r') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\HN34064\\Desktop\\Dev\\NoteTaking\\Vault\\Practice\\P-1004\\data/restaurants_L2_dirty.csv'
+2026-10-16 16:03:32,089 | ERROR | restaurants | Error durante la extracción
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\P-1004\src\p_1004\pipelines\restaurants\run.py", line 11, in <module>
+    restaurants_data = extract.extract_restaurants_data(filename=filename)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\dev\NoteTaking\vault\Practice\P-1004\src\p_1004\pipelines\restaurants\extract.py", line 14, in extract_restaurants_data
+    with open(f'{utils.DATA_DIR}/{filename}','r') as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\HN34064\\Desktop\\Dev\\NoteTaking\\Vault\\Practice\\P-1004\\data/restaurants_L2_dirty.csv'
+2026-10-16 16:04:53,044 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:04:53,044 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:04:53,044 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:04:53,046 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 16:04:53,046 | INFO | restaurants | Iniciando Carga
+2026-10-16 16:04:53,046 | ERROR | restaurants | Error durante la extracción
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\P-1004\src\p_1004\pipelines\restaurants\run.py", line 15, in <module>
+    load_restaurants(restaurants_data=restaurants_data)
+    ^^^^^^^^^^^^^^^^
+NameError: name 'load_restaurants' is not defined
+2026-10-16 16:05:05,181 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:05:05,181 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:05:05,181 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:05:05,197 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 16:05:05,197 | INFO | restaurants | Iniciando Carga
+2026-10-16 16:05:05,197 | ERROR | restaurants | Error durante la extracción
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\P-1004\src\p_1004\pipelines\restaurants\run.py", line 15, in <module>
+    load_restaurants(restaurants_data=restaurants_data)
+    ^^^^^^^^^^^^^^^^
+NameError: name 'load_restaurants' is not defined
+2026-10-16 16:05:23,631 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:05:23,631 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:05:23,631 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:05:23,631 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 16:05:23,631 | INFO | restaurants | Iniciando Carga
+2026-10-16 16:05:23,647 | INFO | restaurants | Carga Completada
+2026-10-16 16:05:23,647 | INFO | restaurants | Pipeline restaurants finalizado exitosamente
+2026-10-16 16:15:54,781 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:15:54,781 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:15:54,781 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:15:54,781 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 16:15:54,781 | INFO | restaurants | Iniciando Carga
+2026-10-16 16:15:54,781 | INFO | restaurants | Iniciando sesion en DB
+2026-10-16 16:15:54,781 | INFO | restaurants | Creando tabla RAW_TBL_RESTAURANTS si no existe
+2026-10-16 16:15:54,781 | INFO | restaurants | Tabla RAW_TBL_RESTAURANTS validada exitosamente
+2026-10-16 16:15:54,781 | INFO | restaurants | Iniciando carga de 82 registros
+2026-10-16 16:15:54,797 | INFO | restaurants | Carga de información completada con éxito.
+2026-10-16 16:15:54,797 | INFO | restaurants | Carga Completada
+2026-10-16 16:15:54,797 | INFO | restaurants | Pipeline restaurants finalizado exitosamente
+2026-10-16 16:30:05,018 | INFO | restaurants | Pipeline restaurants iniciado
+2026-10-16 16:30:05,018 | INFO | restaurants | Iniciado Extracción
+2026-10-16 16:30:05,018 | INFO | restaurants | Leyendo archivo .csv
+2026-10-16 16:30:05,018 | INFO | restaurants | Extracción completada. Registros: 83
+2026-10-16 16:30:05,018 | INFO | restaurants | Iniciando Carga
+2026-10-16 16:30:05,018 | INFO | restaurants | Iniciando sesion en DB
+2026-10-16 16:30:05,018 | INFO | restaurants | Creando tabla RAW_TBL_RESTAURANTS si no existe
+2026-10-16 16:30:05,018 | INFO | restaurants | Tabla RAW_TBL_RESTAURANTS validada exitosamente
+2026-10-16 16:30:05,018 | INFO | restaurants | Iniciando carga de 83 registros
+2026-10-16 16:30:05,023 | INFO | restaurants | Carga de información completada con éxito.
+2026-10-16 16:30:05,023 | INFO | restaurants | Carga Completada
+2026-10-16 16:30:05,023 | INFO | restaurants | Pipeline restaurants finalizado exitosamente
