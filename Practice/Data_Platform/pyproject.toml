@@ -1,0 +1,24 @@
+[project]
+name = "data-platform"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ggsm-gff", email = "gerson.santos@ficohsa.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-core>=1.12.6",
+    "dbt-duckdb>=1.11.0",
+    "duckdb>=2.0.0",
+    "ipykernel>=7.4.0",
+    "pandas>=3.1.0",
+    "pip>=26.2.2",
+]
+
+[project.scripts]
+data-platform = "data_platform:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"

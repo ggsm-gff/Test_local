@@ -1,0 +1,14 @@
+2026-11-02 12:35:59,986 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-02 12:36:00,039 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-11-02 12:36:00,042 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-11-02 12:36:00,042 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-11-02 12:36:00,044 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-11-02 12:36:00,056 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-02 12:51:34,987 | INFO | restaurants | Iniciando Fase: load_raw_restaurants_data
+2026-11-02 12:51:34,987 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-02 12:51:35,019 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-11-02 12:51:35,019 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-11-02 12:51:35,019 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-11-02 12:51:35,032 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-11-02 12:51:35,044 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-02 12:51:35,044 | INFO | restaurants | Fase completada: load_raw_restaurants_data| Duración: 0.04270700004417449

@@ -1,0 +1,65 @@
+2026-10-23 11:40:34,884 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 11:40:34,915 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 11:40:34,915 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 11:40:34,915 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 11:40:34,915 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 11:40:34,931 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-10-23 11:40:48,587 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 11:40:48,656 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants.py", line 65, in load_raw_restaurants_data
+    db = utils.get_db_session()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 38, in get_db_session
+    db = duckdb.connect(WAREHOUSE_PATH/"warehouse.duckdb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\warehouse\warehouse.duckdb": El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso.
+
+File is already open in 
+C:\Users\HN34064\AppData\Local\Programs\Python\Python312\python.exe (PID 21852)
+2026-10-23 11:43:29,693 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 11:43:29,719 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 11:43:29,719 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 11:43:29,719 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 11:43:29,721 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 11:43:29,736 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-10-23 11:44:13,677 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 11:44:13,700 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 11:44:13,702 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 11:44:13,702 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 11:44:13,702 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 11:44:13,712 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-10-23 11:50:05,010 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 11:50:05,036 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 11:50:05,038 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 11:50:05,038 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 11:50:05,038 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 11:50:05,053 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-10-23 11:59:16,351 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 11:59:16,351 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 12:07:47,167 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 12:07:47,199 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 12:07:47,199 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 12:07:47,199 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 12:07:47,206 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 12:07:47,206 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants.py", line 107, in load_raw_restaurants_data
+    insert_raw_restaurants_data(df=df,db=db)
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants.py", line 39, in insert_raw_restaurants_data
+    db.execute("""
+_duckdb.BinderException: Binder Error: Table "TBL_RESTAURANTS" does not have a column with name "address"
+
+Did you mean: "ADDR"
+2026-10-23 12:09:47,350 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 12:09:47,366 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 12:09:47,366 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 12:09:47,366 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 12:09:47,366 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 12:09:47,397 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-10-23 12:10:07,135 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-10-23 12:10:07,172 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\restaurants_L2_dirty.csv
+2026-10-23 12:10:07,176 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (82, 6) shape
+2026-10-23 12:10:07,176 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_RESTAURANTS
+2026-10-23 12:10:07,176 | INFO | restaurants | insert_raw_restaurants_data: Inserting ((82, 6)) DataFrame
+2026-10-23 12:10:07,190 | INFO | restaurants | load_raw_restaurants_data: Completed

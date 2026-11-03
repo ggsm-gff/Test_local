@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Raw data ingested from the restaurants API
+
+    tables:
+      - name: tbl_restaurants
+        description: Raw restaurant records
+
+        columns:
+          - name: id
+            description: Unique restaurant identifier
+            tests:
+              - not_null
+              - unique
+
+          - name: addr
+            description: Unique restaurant Address
+            tests:
+              - not_null
+              #- unique
+
+          - name: name
+            description: Restaurant name
+
+          - name: city
+            description: City where the restaurant is located
+
+          - name: phone
+            description: Restaurant phone
+
+          - name: type
+            description: Restaurant type
