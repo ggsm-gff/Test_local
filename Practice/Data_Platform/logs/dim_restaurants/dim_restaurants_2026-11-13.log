@@ -1,0 +1,37 @@
+2026-11-13 15:36:21,080 | INFO | dim_restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 15:36:21,080 | INFO | dim_restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 15:36:21,104 | INFO | dim_restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 15:36:21,104 | ERROR | dim_restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__dim_restaurants.py", line 104, in load_raw_restaurants_data
+    create_raw_dim_restaurants_table(db)
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__dim_restaurants.py", line 79, in create_raw_dim_restaurants_table
+    logger.info("create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS")
+    ^^^^^^
+NameError: name 'logger' is not defined
+2026-11-13 15:36:21,104 | ERROR | dim_restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.031784400111064315
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__dim_restaurants.py", line 104, in load_raw_restaurants_data
+    create_raw_dim_restaurants_table(db)
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__dim_restaurants.py", line 79, in create_raw_dim_restaurants_table
+    logger.info("create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS")
+    ^^^^^^
+NameError: name 'logger' is not defined
+2026-11-13 15:47:55,410 | INFO | dim_restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 15:47:55,410 | INFO | dim_restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 15:47:55,410 | INFO | dim_restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 15:47:55,410 | INFO | dim_restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 15:47:55,422 | INFO | dim_restaurants | read_raw_dim_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 15:47:55,425 | INFO | dim_restaurants | read_raw_dim_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 15:47:55,426 | INFO | dim_restaurants | Total rows loaded into db : 5
+2026-11-13 15:47:55,435 | INFO | dim_restaurants | read_raw_dim_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 10
+2026-11-13 15:47:55,442 | INFO | dim_restaurants | Total rows loaded into db : 10
+2026-11-13 15:47:55,443 | INFO | dim_restaurants | read_raw_dim_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 15
+2026-11-13 15:47:55,443 | INFO | dim_restaurants | Total rows loaded into db : 15
+2026-11-13 15:47:55,451 | INFO | dim_restaurants | read_raw_dim_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 20
+2026-11-13 15:47:55,458 | INFO | dim_restaurants | Total rows loaded into db : 20
+2026-11-13 15:47:55,458 | INFO | dim_restaurants | load_raw_restaurants_data: Completed
+2026-11-13 15:47:55,458 | INFO | dim_restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.03852630010806024

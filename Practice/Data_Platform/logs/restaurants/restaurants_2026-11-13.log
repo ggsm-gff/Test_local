@@ -1,0 +1,246 @@
+2026-11-13 10:45:48,045 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:45:48,045 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:45:48,083 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:45:48,084 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:45:48,087 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:45:48,087 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 19, in read_raw_restaurants_data
+    ppn_dt = datetime.today().date()
+             ^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'today'
+2026-11-13 10:45:48,088 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.037111900048330426
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 19, in read_raw_restaurants_data
+    ppn_dt = datetime.today().date()
+             ^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'today'
+2026-11-13 10:46:15,698 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:46:15,698 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:46:15,709 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:46:15,709 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:46:15,710 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:46:15,711 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() takes 1 positional argument but 2 were given
+2026-11-13 10:46:15,711 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.00660800002515316
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() takes 1 positional argument but 2 were given
+2026-11-13 10:46:47,775 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:46:47,775 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:46:47,776 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:46:47,776 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:46:47,777 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:46:47,777 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() got an unexpected keyword argument 'path'
+2026-11-13 10:46:47,777 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.0040080000180751085
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() got an unexpected keyword argument 'path'
+2026-11-13 10:47:21,236 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:47:21,236 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:47:21,238 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:47:21,238 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:47:21,239 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:47:21,239 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() got an unexpected keyword argument 'chunk_size'
+2026-11-13 10:47:21,239 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.0036124999169260263
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 8, in read_raw_restaurants_data
+    logger=utils.get_logger(PIPELINE_NAME)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_csv() got an unexpected keyword argument 'chunk_size'
+2026-11-13 10:47:46,303 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:47:46,303 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:47:46,311 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:47:46,311 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:47:46,312 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:47:46,314 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 9, in read_raw_restaurants_data
+NameError: name 'today' is not defined
+2026-11-13 10:47:46,315 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.004777699941769242
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 108, in load_raw_restaurants_data
+    for df in read_raw_restaurants_data(path, 5):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\ingests\raw__restaurants_transactions.py", line 9, in read_raw_restaurants_data
+NameError: name 'today' is not defined
+2026-11-13 10:48:07,986 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:48:07,986 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:48:07,989 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:48:07,989 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:48:07,989 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:48:07,991 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:48:07,992 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:48:07,993 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:48:07,993 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:48:07,993 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 10:48:07,993 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.0063974999357014894
+2026-11-13 10:56:43,646 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:56:43,647 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:56:43,648 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:56:43,648 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:56:43,649 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:56:43,651 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:56:43,651 | INFO | restaurants | total rows read: 5
+2026-11-13 10:56:43,652 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:56:43,652 | INFO | restaurants | total rows read: 10
+2026-11-13 10:56:43,653 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:56:43,653 | INFO | restaurants | total rows read: 15
+2026-11-13 10:56:43,653 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape
+2026-11-13 10:56:43,654 | INFO | restaurants | total rows read: 20
+2026-11-13 10:56:43,654 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 10:56:43,654 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.006976900156587362
+2026-11-13 10:57:45,204 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 10:57:45,204 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 10:57:45,209 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:57:45,209 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 10:57:45,209 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 10:57:45,210 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 10:57:45,212 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 10
+2026-11-13 10:57:45,212 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 15
+2026-11-13 10:57:45,214 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 20
+2026-11-13 10:57:45,214 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 10:57:45,214 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.006033899961039424
+2026-11-13 11:16:51,301 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 11:16:51,302 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 11:16:51,305 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:16:51,306 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 11:16:51,308 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:16:51,309 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 11:16:51,310 | INFO | restaurants | insert_raw_dim_restaurants_data: Inserting ((5, 4)) DataFrame
+2026-11-13 11:16:51,313 | ERROR | restaurants | Error during ingest process
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 13, in load_raw_restaurants_data
+    #logger = get_logger("")
+                ^^^^^^^^^^^^^
+  File "<string>", line 8, in insert_raw_dim_restaurants_data
+_duckdb.BinderException: Binder Error: Table "tgt" does not have a column named "id"
+
+Candidate bindings: : "PPN_DT", "RESTAURANT_ID", "RESTAURANT_NAME", "ZONE"
+
+LINE 3:         ON tgt.id = src.id
+                            ^^^^^^
+2026-11-13 11:16:51,313 | ERROR | restaurants | Failed in phase: load_raw_restaurants_data| Duration: 0.01285729999653995
+Traceback (most recent call last):
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 60, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HN34064\Desktop\Dev\Notetaking\Vault\Practice\Data_Platform\src\data_platform\utils\utils.py", line 13, in load_raw_restaurants_data
+    #logger = get_logger("")
+                ^^^^^^^^^^^^^
+  File "<string>", line 8, in insert_raw_dim_restaurants_data
+_duckdb.BinderException: Binder Error: Table "tgt" does not have a column named "id"
+
+Candidate bindings: : "PPN_DT", "RESTAURANT_ID", "RESTAURANT_NAME", "ZONE"
+
+LINE 3:         ON tgt.id = src.id
+                            ^^^^^^
+2026-11-13 11:17:22,090 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 11:17:22,090 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 11:17:22,092 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:17:22,092 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 11:17:22,093 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:17:22,093 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 11:17:22,093 | INFO | restaurants | insert_raw_dim_restaurants_data: Inserting ((5, 4)) DataFrame
+2026-11-13 11:17:22,110 | INFO | restaurants | Total rows loaded into db : 5
+2026-11-13 11:17:22,111 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 10
+2026-11-13 11:17:22,111 | INFO | restaurants | insert_raw_dim_restaurants_data: Inserting ((5, 4)) DataFrame
+2026-11-13 11:17:22,118 | INFO | restaurants | Total rows loaded into db : 10
+2026-11-13 11:17:22,118 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 15
+2026-11-13 11:17:22,118 | INFO | restaurants | insert_raw_dim_restaurants_data: Inserting ((5, 4)) DataFrame
+2026-11-13 11:17:22,126 | INFO | restaurants | Total rows loaded into db : 15
+2026-11-13 11:17:22,126 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 20
+2026-11-13 11:17:22,126 | INFO | restaurants | insert_raw_dim_restaurants_data: Inserting ((5, 4)) DataFrame
+2026-11-13 11:17:22,134 | INFO | restaurants | Total rows loaded into db : 20
+2026-11-13 11:17:22,134 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 11:17:22,134 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.04355139983817935
+2026-11-13 11:21:14,891 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 11:21:14,892 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 11:21:14,892 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:21:14,894 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 11:21:14,895 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 11:21:14,896 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 11:21:14,902 | INFO | restaurants | Total rows loaded into db : 5
+2026-11-13 11:21:14,903 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 10
+2026-11-13 11:21:14,908 | INFO | restaurants | Total rows loaded into db : 10
+2026-11-13 11:21:14,909 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 15
+2026-11-13 11:21:14,913 | INFO | restaurants | Total rows loaded into db : 15
+2026-11-13 11:21:14,913 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 20
+2026-11-13 11:21:14,918 | INFO | restaurants | Total rows loaded into db : 20
+2026-11-13 11:21:14,918 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 11:21:14,918 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.025856400141492486
+2026-11-13 12:29:53,462 | INFO | restaurants | Starting phase: load_raw_restaurants_data
+2026-11-13 12:29:53,462 | INFO | restaurants | load_raw_restaurants_data: Starting process
+2026-11-13 12:29:53,475 | INFO | restaurants | reading paht: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 12:29:53,475 | INFO | restaurants | create_raw_restaurants_table: Creating table RAW.TBL_DIM_RESTAURANTS
+2026-11-13 12:29:53,475 | INFO | restaurants | read_raw_restaurants_data: C:\Users\HN34064\Desktop\Dev\NoteTaking\Vault\Practice\Data_Platform\data\restaurants\dim_restaurants.csv
+2026-11-13 12:29:53,475 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 5
+2026-11-13 12:29:53,493 | INFO | restaurants | Total rows loaded into db : 5
+2026-11-13 12:29:53,493 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 10
+2026-11-13 12:29:53,493 | INFO | restaurants | Total rows loaded into db : 10
+2026-11-13 12:29:53,493 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 15
+2026-11-13 12:29:53,493 | INFO | restaurants | Total rows loaded into db : 15
+2026-11-13 12:29:53,493 | INFO | restaurants | read_raw_restaurants_data: DataFrame read with: (5, 4) shape | total rows read: 20
+2026-11-13 12:29:53,508 | INFO | restaurants | Total rows loaded into db : 20
+2026-11-13 12:29:53,508 | INFO | restaurants | load_raw_restaurants_data: Completed
+2026-11-13 12:29:53,508 | INFO | restaurants | Completed phase: load_raw_restaurants_data| Duration: 0.03782010008580983

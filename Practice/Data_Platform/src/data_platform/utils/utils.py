@@ -10,7 +10,6 @@ LOGS_PATH = DATA_PLATFORM_PATH / "logs"
 DATA_PATH = DATA_PLATFORM_PATH / "data"
 DBT_PATH = DATA_PLATFORM_PATH / "dbt"
 WAREHOUSE_PATH = DATA_PATH / "warehouse"
-#logger = get_logger("")
 
 def get_logger(name:str) ->logging.Logger:
     logger = logging.getLogger(name)
@@ -44,13 +43,17 @@ def close_db_session(db:duckdb.DuckDBPyConnection):
     #logger.info("close_db_session: Clossing a db Connection")
     db.close()
 
-def log_execution(pipeline_name):
-    
-    logger = get_logger(pipeline_name)
+
+def log_execution(pipeline_name:str):
+    '''
+    Decorator for logging function executions.
+    '''
+    #logger = get_logger(pipeline_name)
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
             phase = func.__name__
+            logger = get_logger(pipeline_name)
             start_time = time.perf_counter()
             logger.info(f'Starting phase: {phase}')
             try:
@@ -65,3 +68,6 @@ def log_execution(pipeline_name):
                 raise
         return wrapper
     return decorator
+
+if __name__ == '__main__':
+    pass
